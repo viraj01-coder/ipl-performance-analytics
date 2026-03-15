@@ -90,9 +90,9 @@ with tab2:
         probability = model.predict_proba(input_data)[0][1] * 100
         
         if prediction == 1:
-            st.success(f"✅ {pred_player} ke 30+ runs karne ke chances hain!")
+            st.success(f"✅ {pred_player} is possible take a chance 30+ runs!")
         else:
-            st.warning(f"⚠️ {pred_player} ke 30+ runs karne ke chances kam hain!")
+            st.warning(f"⚠️ {pred_player} is not capable to 30+ runs!")
         
         st.info(f"**Probability: {probability:.1f}%**")
         st.info(f"**Avg vs {opponent}: {opp_avg:.1f}**")
