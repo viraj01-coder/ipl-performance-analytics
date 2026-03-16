@@ -300,7 +300,7 @@ with tab2:
 
     col1, col2 = st.columns(2)
     with col1:
-        pred_player = st.selectbox("🧑 Batsman Select Karo", all_batsmen,
+        pred_player = st.selectbox("🧑 Choose Player", all_batsmen,
                                    index=all_batsmen.index(sidebar_player), key='pred')
     with col2:
         opponent = st.selectbox("🏟️ Opponent Team", all_teams,
