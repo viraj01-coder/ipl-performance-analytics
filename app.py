@@ -148,7 +148,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### 🔍 Filters")
 
-    sidebar_player = st.selectbox("🧑 Player Select Karo", all_batsmen, key='sidebar_player')
+    sidebar_player = st.selectbox("🧑 Choose Player", all_batsmen, key='sidebar_player')
     sidebar_team = st.selectbox("🏟️ Opponent Team", all_teams, key='sidebar_team')
 
     st.markdown("---")
