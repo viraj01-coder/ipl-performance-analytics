@@ -20,7 +20,7 @@ Developed by **Virajbhai Mavani**, this project integrates **Data Engineering (S
 ## ✨ Key Features
 
 ### 📊 Interactive Player Dashboard
-* **Real-time Analytics**: Fetch and display career statistics like Total Innings, Balls, and Runs.
+**Career Analytics**: Displays complete career statistics including Total Innings, Balls faced, and Runs scored.
 * **Performance Metrics**: Automated calculation of Strike Rate and Batting Average.
 * **Dynamic Selection**: Analyze any player from the extensive IPL database (2008-2024).
 * **Interactive Charts**: Top 10 Run Scorers, 30+ Scores Count, and Avg Runs vs Each Team.
