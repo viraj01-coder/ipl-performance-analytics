@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 
 st.set_page_config(page_title="IPL Performance Analytics", page_icon="🏏", layout="wide")
 
@@ -9,6 +10,14 @@ st.set_page_config(page_title="IPL Performance Analytics", page_icon="🏏", lay
 def load_data():
     career = pd.read_csv('ipl_career_stats.csv')
     batting = pd.read_csv('ipl_batting.csv')
+
+    final_data = pd.read_csv('ipl_features.csv')
+    X = final_data[['strike_rate', 'average_per_innings', 'avg_vs_opponent']]
+    y = final_data['scored_30_plus']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    model = RandomForestClassifier(n_estimators=200, random_state=42)
+    model.fit(X_train, y_train)
+
     return model, career, batting
 
 model, career, batting = load_data()
@@ -29,13 +38,13 @@ with tab1:
     with col1:
         st.metric("Total Innings", f"{int(player_data['total_innings']):,}")
     with col2:
-         st.metric("Total Balls", f"{int(player_data['total_balls']):,}")
+        st.metric("Total Balls", f"{int(player_data['total_balls']):,}")
     with col3:
         st.metric("Total Runs", f"{int(player_data['total_runs']):,}")
     with col4:
         st.metric("Strike Rate", f"{player_data['strike_rate']:.2f}")
     with col5:
-          st.metric("Batting Average", f"{player_data['batting_average']:.2f}")
+        st.metric("Batting Average", f"{player_data['average_per_innings']:.2f}")
 
 with tab2:
     st.subheader("30+ Runs Prediction")
