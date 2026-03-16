@@ -10,7 +10,7 @@ An advanced **Data Science** & **Machine Learning** application that analyzes IP
 ---
 
 ## 🌐 Live Demo
-Check out the live application here: **[Your Streamlit App URL Here]**
+Check out the live application here: **[https://ipl-performance-analytics-sfbhakzbyf2hdspvmetmva.streamlit.app/]**
 
 ---
 
