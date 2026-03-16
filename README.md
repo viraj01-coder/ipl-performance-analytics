@@ -2,52 +2,53 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
-An interactive **Machine Learning** web application that analyzes IPL player statistics from 2008 to 2024 and predicts high-scoring performances.
+An advanced **Data Science** & **Machine Learning** application that analyzes IPL historical data (2008-2024) and predicts player performance using predictive modeling.
 
 ---
 
 ## 🌐 Live Demo
-Check out the live application here: **[Deploying on Streamlit... Your URL Here]**
+Check out the live application here: **[https://ipl-performance-analytics-sfbhakzbyf2hdspvmetmva.streamlit.app/]**
 
 ---
 
 ## 📖 Project Overview
-This application, developed by **Virajbhai Mavani**, serves as a powerful dashboard for IPL fans and data analysts. It processes historical ball-by-ball data to provide career insights and uses a **Random Forest Classifier** to predict if a batsman will score **30 or more runs** in a given match based on their form and the opponent.
+Developed by **Virajbhai Mavani**, this project combines **Data Engineering (SQL)**, **Exploratory Data Analysis (Pandas)**, and **Predictive Modeling (Scikit-Learn)**. It allows users to dive deep into player statistics and predicts the likelihood of a batsman scoring **30+ runs** against a specific opponent using a trained Machine Learning model.
 
 ## ✨ Key Features
 
-### 📊 Player Stats Dashboard
-* **Detailed Metrics**: Real-time display of Total Innings, Balls Faced, and Total Runs.
-* **Efficiency Tracking**: Instant calculation of Career Strike Rate and Batting Average.
-* **Player Selection**: Dynamic dropdown menu featuring all unique IPL batsmen from 2008-2024.
+### 📊 Player Performance Dashboard
+* **Dynamic Analytics**: View career stats including Total Innings, Balls, and Runs.
+* **Performance Metrics**: Real-time display of Strike Rate and Batting Average.
+* **Player Search**: Filter and analyze data for any batsman in the IPL history.
 
-### 🎯 30+ Runs Predictor
-* **ML Engine**: Powered by a Random Forest model with 200 estimators.
-* **Smart Features**: The model evaluates **Strike Rate**, **Season Average**, and **Average vs specific Opponent**.
-* **Probabilistic Output**: Displays the exact percentage likelihood of a high-scoring innings.
+### 🧠 Machine Learning Predictor
+* **Random Forest Model**: Implemented using `sklearn.ensemble.RandomForestClassifier` with 200 estimators.
+* **Predictive Insights**: Predicts if a player will cross the 30-run mark based on their strike rate, average, and head-to-head record.
+* **Confidence Scoring**: Displays the match-specific probability percentage.
 
 ---
 
-## 🛠️ Technical Stack
+## 🛠️ Technical Stack & Libraries
 
-| Component | Technology |
+| Category | Tools/Libraries |
 | :--- | :--- |
-| **Frontend** | Streamlit (Python-based UI) |
-| **Data Processing** | Pandas, NumPy |
-| **Machine Learning** | Scikit-Learn (Random Forest) |
-| **Dataset Source** | Kaggle (IPL Complete Dataset 2008-2024) |
+| **Frontend** | Streamlit |
+| **Database/Querying** | SQL (Data extraction & transformation) |
+| **Machine Learning** | Scikit-Learn (Random Forest, Train-Test Split) |
+| **Data Manipulation** | Pandas, NumPy |
+| **Dataset Source** | Kaggle (IPL Ball-by-Ball 2008-2024) |
 
 ---
 
 ## 📂 Project Structure
 ```text
-├── app.py                # The main Streamlit application script
+├── app.py                # Main Streamlit application with ML logic
 ├── ipl_career_stats.csv  # Aggregated player career statistics
-├── ipl_batting.csv       # Ball-by-ball batting records
-├── ipl_features.csv      # Processed features for ML model training
-├── IPL_Ball_by_Ball.csv  # Raw ball-by-ball historical data
-├── IPL_Matches.csv       # Historical match results and metadata
+├── ipl_batting.csv       # Filtered batting performance data
+├── ipl_features.csv      # Feature-engineered data for ML training
+├── IPL_Ball_by_Ball.csv  # Raw ball-by-ball historical records
+├── IPL_Matches.csv       # Match-level metadata and results
 └── README.md             # Project documentation
