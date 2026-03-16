@@ -9,6 +9,11 @@ An interactive **Machine Learning** web application that analyzes IPL player sta
 
 ---
 
+## 🌐 Live Demo
+Check out the live application here: **[Deploying on Streamlit... Your URL Here]**
+
+---
+
 ## 📖 Project Overview
 This application, developed by **Virajbhai Mavani**, serves as a powerful dashboard for IPL fans and data analysts. It processes historical ball-by-ball data to provide career insights and uses a **Random Forest Classifier** to predict if a batsman will score **30 or more runs** in a given match based on their form and the opponent.
 
@@ -33,7 +38,6 @@ This application, developed by **Virajbhai Mavani**, serves as a powerful dashbo
 | **Frontend** | Streamlit (Python-based UI) |
 | **Data Processing** | Pandas, NumPy |
 | **Machine Learning** | Scikit-Learn (Random Forest) |
-| **Deployment** | Python 3.x |
 | **Dataset Source** | Kaggle (IPL Complete Dataset 2008-2024) |
 
 ---
@@ -41,7 +45,9 @@ This application, developed by **Virajbhai Mavani**, serves as a powerful dashbo
 ## 📂 Project Structure
 ```text
 ├── app.py                # The main Streamlit application script
-├── ipl_career_stats.csv  # Pre-processed career-level statistics
-├── ipl_batting.csv       # Historical batting performance data
-├── ipl_features.csv      # Feature-engineered dataset for ML training
+├── ipl_career_stats.csv  # Aggregated player career statistics
+├── ipl_batting.csv       # Ball-by-ball batting records
+├── ipl_features.csv      # Processed features for ML model training
+├── IPL_Ball_by_Ball.csv  # Raw ball-by-ball historical data
+├── IPL_Matches.csv       # Historical match results and metadata
 └── README.md             # Project documentation
