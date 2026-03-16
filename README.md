@@ -10,24 +10,24 @@ An advanced **Data Science** & **Machine Learning** application that analyzes IP
 ---
 
 ## 🌐 Live Demo
-Check out the live application here: **[https://ipl-performance-analytics-sfbhakzbyf2hdspvmetmva.streamlit.app/]**
+Check out the live application here: **[Your Streamlit App URL Here]**
 
 ---
 
 ## 📖 Project Overview
-Developed by **Virajbhai Mavani**, this project combines **Data Engineering (SQL)**, **Exploratory Data Analysis (Pandas)**, and **Predictive Modeling (Scikit-Learn)**. It allows users to dive deep into player statistics and predicts the likelihood of a batsman scoring **30+ runs** against a specific opponent using a trained Machine Learning model.
+Developed by **Virajbhai Mavani**, this project integrates **Data Engineering (SQL)**, **Exploratory Data Analysis (Pandas)**, and **Predictive Modeling (Scikit-Learn)**. The app handles large-scale IPL datasets to provide deep player insights and uses a **Random Forest** model to predict the likelihood of a batsman scoring **30+ runs** in a match.
 
 ## ✨ Key Features
 
-### 📊 Player Performance Dashboard
-* **Dynamic Analytics**: View career stats including Total Innings, Balls, and Runs.
-* **Performance Metrics**: Real-time display of Strike Rate and Batting Average.
-* **Player Search**: Filter and analyze data for any batsman in the IPL history.
+### 📊 Interactive Player Dashboard
+* **Real-time Analytics**: Fetch and display career statistics like Total Innings, Balls, and Runs.
+* **Performance Metrics**: Automated calculation of Strike Rate and Batting Average.
+* **Dynamic Selection**: Analyze any player from the extensive IPL database (2008-2024).
 
-### 🧠 Machine Learning Predictor
-* **Random Forest Model**: Implemented using `sklearn.ensemble.RandomForestClassifier` with 200 estimators.
-* **Predictive Insights**: Predicts if a player will cross the 30-run mark based on their strike rate, average, and head-to-head record.
-* **Confidence Scoring**: Displays the match-specific probability percentage.
+### 🎯 Machine Learning Predictor
+* **Algorithm**: Built with `RandomForestClassifier` (200 estimators) for robust classification.
+* **Smart Features**: Uses player's Strike Rate, Season Average, and specific Record against Opponents.
+* **Probability Output**: Provides a percentage-based confidence score for each prediction.
 
 ---
 
@@ -36,19 +36,18 @@ Developed by **Virajbhai Mavani**, this project combines **Data Engineering (SQL
 | Category | Tools/Libraries |
 | :--- | :--- |
 | **Frontend** | Streamlit |
-| **Database/Querying** | SQL (Data extraction & transformation) |
+| **Database & Logic** | SQL & Python |
 | **Machine Learning** | Scikit-Learn (Random Forest, Train-Test Split) |
 | **Data Manipulation** | Pandas, NumPy |
-| **Dataset Source** | Kaggle (IPL Ball-by-Ball 2008-2024) |
+| **Dataset Source** | Kaggle (IPL Complete Dataset 2008-2024) |
 
 ---
 
 ## 📂 Project Structure
 ```text
-├── app.py                # Main Streamlit application with ML logic
+├── app.py                # Main Streamlit application script
 ├── ipl_career_stats.csv  # Aggregated player career statistics
 ├── ipl_batting.csv       # Filtered batting performance data
-├── ipl_features.csv      # Feature-engineered data for ML training
-├── IPL_Ball_by_Ball.csv  # Raw ball-by-ball historical records
-├── IPL_Matches.csv       # Match-level metadata and results
+├── ipl_features.csv      # Processed features for ML model training
+├── matches.csv           # Historical match-level metadata
 └── README.md             # Project documentation
